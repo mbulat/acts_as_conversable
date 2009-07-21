@@ -1,0 +1,2 @@
+receiver: '<%= receiver_model %>'
+sender: '<%= sender_model %>'
