@@ -51,15 +51,19 @@ Create a message within a conversation, and choose the message sender and the re
     @message = Message.new(:conversation => @conversation, :body => "Let's go for a hike.", :sender => @user_one, :receiver => @user_two)
     @message.save
     
-List a users sent messages 
+List a user's sent messages 
   
     >> @user_one.sent_messages
     => [#<Message id: 1, conversation_id: 1, subject: nil, body: "Let's go for a hike.", sender_id: 1, sender_type: "User", receiver_id: 2, receiver_type: "User", created_at: "2009-07-21 17:23:22", updated_at: "2009-07-21 17:23:22">]
 
-List a users received messages
+List a user's received messages
 
     >> @user_two.received_messages
     => [#<Message id: 1, conversation_id: 1, subject: nil, body: "Let's go for a hike.", sender_id: 1, sender_type: "User", receiver_id: 2, receiver_type: "User", created_at: "2009-07-21 17:23:22", updated_at: "2009-07-21 17:23:22">]
 
+List all the message for a given user's conversation
+
+    >> @user_one.conversations[0].messages
+    [#<Message id: 1, conversation_id: 1, subject: nil, body: "Let's go for a hike.", sender_id: 1, sender_type: "User", receiver_id: 2, receiver_type: "User", created_at: "2009-07-21 17:23:22", updated_at: "2009-07-21 17:23:22">, #<Message id: 2, conversation_id: 1, subject: nil, body: "Sounds like a date!", sender_id: 2, sender_type: "User", receiver_id: 1, receiver_type: "User", created_at: "2009-07-21 17:54:14", updated_at: "2009-07-21 17:54:14">]
 
 Copyright (c) 2009 Michael Bulat, released under the MIT license
