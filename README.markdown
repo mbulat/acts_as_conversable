@@ -7,7 +7,13 @@ Installation
 ============
 
 - install plugin `./script/plugin install git://github.com/mbulat/acts_as_conversable.git`
+
+  or use [git submodule](http://github.com/guides/using-git-submodules-to-track-plugins) 
+
+ `git submodule add git://github.com/mbulat/acts_as_conversable.git vendor/plugins/acts_as_conversable`  
+
 - generate migration files `./script/generate conversable`
+
 - run migrations `rake db:migrate`
 
 Example
