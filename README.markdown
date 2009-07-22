@@ -6,8 +6,8 @@ This acts_as_conversable plugin provides mixin conversation functionality for an
 Installation
 ============
 
-- install plugin `script/plugin install git://github.com/mbulat/acts_as_conversable.git`
-- generate migration files `/script/generate conversable`
+- install plugin `./script/plugin install git://github.com/mbulat/acts_as_conversable.git`
+- generate migration files `./script/generate conversable`
 - run migrations `rake db:migrate`
 
 Example

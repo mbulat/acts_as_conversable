@@ -14,7 +14,7 @@ class Conversable < ActiveRecord::Migration
 
     create_table :messages do |t|
       t.integer :conversation_id
-      t.string :body
+      t.text :body
       t.integer :sender_id
       t.string :sender_type
       t.integer :receiver_id
