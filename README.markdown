@@ -27,22 +27,17 @@ Starting a conversation
 -----------------------
 Generate some users that want to converse (these are whatever model(s) you mark acts_as_conversable)
 
-    @user_one = User.new(:name => 'George')
-    @user_one.save
-    @user_two = User.new(:name => 'Gracie')
-    @user_two.save
-
+    @user_one = User.create!(:name => 'George')
+    @user_two = User.create!(:name => 'Gracie')
+    
 Create a conversation
 
-    @conversation = Conversation.new(:subject => 'This weekend')
-    @conversation.save
+    @conversation = Conversation.create!(:subject => 'This weekend')
 
 Invite users to participate in the conversation
 
-    @conversation_participant_one = ConversationParticipant.new(:conversation => @conversation, :participant => @user_one)
-    @conversation_participant_one.save
-    @conversation_participant_two = ConversationParticipant.new(:conversation => @conversation, :participant => @user_two)
-    @conversation_participant_two.save
+    @conversation_participant_one = ConversationParticipant.create!(:conversation => @conversation, :participant => @user_one)
+    @conversation_participant_two = ConversationParticipant.create!(:conversation => @conversation, :participant => @user_two)
 
 List conversations your users are a part of
 
@@ -54,8 +49,7 @@ Sending messages
 
 Create a message within a conversation, and choose the message sender and the recipient
 
-    @message = Message.new(:conversation => @conversation, :body => "Let's go for a hike.", :sender => @user_one, :receiver => @user_two)
-    @message.save
+    @message = Message.create!(:conversation => @conversation, :body => "Let's go for a hike.", :sender => @user_one, :receiver => @user_two)
     
 List a user's sent messages 
   
