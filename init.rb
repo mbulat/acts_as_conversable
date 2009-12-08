@@ -1,4 +1,5 @@
 require 'acts_as_conversable'
+
 ActiveRecord::Base.send(:include, ActiveRecord::Acts::Conversable)
 
-require File.dirname(__FILE__) + '/lib/acts_as_conversable'
+RAILS_DEFAULT_LOGGER.info "** acts_as_conversable: initialized properly."
