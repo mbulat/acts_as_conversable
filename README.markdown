@@ -66,4 +66,11 @@ List all the message for a given user's conversation
     >> @user_one.conversations[0].messages
     [#<Message id: 1, conversation_id: 1, subject: nil, body: "Let's go for a hike.", sender_id: 1, sender_type: "User", receiver_id: 2, receiver_type: "User", created_at: "2009-07-21 17:23:22", updated_at: "2009-07-21 17:23:22">, #<Message id: 2, conversation_id: 1, subject: nil, body: "Sounds like a date!", sender_id: 2, sender_type: "User", receiver_id: 1, receiver_type: "User", created_at: "2009-07-21 17:54:14", updated_at: "2009-07-21 17:54:14">]
 
+To Do
+----------------
+Add the ability to create messages with multiple recipients
+
+
+* * *
+
 Copyright (c) 2009 Michael Bulat, released under the MIT license
